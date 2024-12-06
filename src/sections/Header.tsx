@@ -1,3 +1,12 @@
 export const HeaderSection = () => {
-  return <div>header section</div>;
+  return (
+    <div>
+      <div className="container">
+        <div className="flex justify-between">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  );
 };
