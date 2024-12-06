@@ -2,7 +2,7 @@ export const HeaderSection = () => {
   return (
     <div>
       <div className="container">
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center h-24">
           <div>
             <img src="/assets/images/logo.svg" alt="Blockforge logo" />
           </div>
