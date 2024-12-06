@@ -1,6 +1,6 @@
 export const HeaderSection = () => {
   return (
-    <div>
+    <header>
       <div className="container">
         <div className="flex justify-between items-center h-24">
           <div>
@@ -18,6 +18,6 @@ export const HeaderSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
