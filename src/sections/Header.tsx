@@ -7,8 +7,9 @@ export const HeaderSection = () => {
             <img src="/assets/images/logo.svg" alt="Blockforge logo" />
           </div>
           <div className="flex gap-4 items-center">
-            <button className="bg-fuchsia-500/20 px-4 py-2 font-extrabold uppercase font-heading text-sm tracking-wide">
-              Get Started
+            <button className="bg-fuchsia-500/20 px-4 py-2 font-extrabold uppercase font-heading text-sm tracking-wide relative">
+              <div className="absolute inset-0 outline outline-2 -outline-offset-2 outline-fuchsia-500"></div>
+              <span>Get Started</span>
             </button>
             <div className="size-10 relative">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
