@@ -2,7 +2,7 @@ import { CutCornerButton } from '../components/CutCornerButton';
 
 export const HeroSection = () => {
   return (
-    <section className="py-24">
+    <section className="py-24 overflow-x-clip">
       <div className="container">
         <p className="uppercase font-extrabold text-center text-zinc-500 tracking-wide">
           Introducing Blockforge
