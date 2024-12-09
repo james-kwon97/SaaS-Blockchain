@@ -16,7 +16,12 @@ export const HeroSection = () => {
         <div className="flex justify-center mt-10">
           <CutCornerButton className="">Get Started</CutCornerButton>
         </div>
-        <div className="inline-flex mt-24">
+        <div className="inline-flex mt-24 relative z-0">
+          <img
+            src="/assets/images/icosahedron.png"
+            alt=""
+            className="absolute w-[calc(100%+100px)] max-w-none -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 saturate-[10%] brightness-[4%] hue-rotate-[240deg]"
+          />
           <img src="/assets/images/icosahedron.png" alt="Icosahedron 3D Image" />
         </div>
       </div>
