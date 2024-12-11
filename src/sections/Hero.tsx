@@ -27,9 +27,9 @@ export const HeroSection = () => {
               <Hexagon className="size-[1800px]" />
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="bg-zinc-900 size-[240px] inline-flex items-center justify-center rounded-full outline outline-[6px] -outline-offset-[6px] outline-fuchsia-500/10 absolute left-[200px] -top-[900px]">
+              <Circle className="absolute left-[200px] -top-[900px]">
                 <img src="/assets/images/cube.png" alt="Cube 3D image" className="size-[140px]" />
-              </div>
+              </Circle>
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute left-[200px] top-[270px]">
