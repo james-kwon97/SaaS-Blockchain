@@ -40,6 +40,11 @@ export const HeroSection = () => {
                 />
               </Circle>
             </div>
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <Circle className="absolute -left-[600px] -top-[80px]">
+                <img src="/assets/images/torus.png" alt="Torus 3D image" className="size-[140px]" />
+              </Circle>
+            </div>
             <img
               src="/assets/images/icosahedron.png"
               alt=""
