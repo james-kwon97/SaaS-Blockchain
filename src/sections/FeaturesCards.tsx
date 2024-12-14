@@ -7,6 +7,7 @@ export const FeaturesCardsSection = () => {
         </h2>
         <div>
           <div className="relative z-0">
+            <div className="absolute size-16 rounded-xl bg-fuchsia-500 top-1.5 right-1.5 -z-10"></div>
             <div className="absolute inset-0 bg-zinc-800 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]"></div>
             <img src="/assets/images/pill.png" alt="Pill image" />
             <h3>Revolutionary Blockchain API</h3>
