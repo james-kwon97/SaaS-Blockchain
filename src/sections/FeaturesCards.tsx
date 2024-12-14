@@ -6,7 +6,8 @@ export const FeaturesCardsSection = () => {
           Discover the future of blockchain with Blockforge
         </h2>
         <div>
-          <div>
+          <div className="relative z-0">
+            <div className="absolute inset-0 bg-zinc-800 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]"></div>
             <img src="/assets/images/pill.png" alt="Pill image" />
             <h3>Revolutionary Blockchain API</h3>
             <p>
