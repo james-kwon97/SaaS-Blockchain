@@ -1,8 +1,10 @@
 export const FeaturesCardsSection = () => {
   return (
-    <section>
+    <section className="py-24">
       <div className="container">
-        <h2>Discover the future of blockchain with Blockforge</h2>
+        <h2 className="font-heading font-black text-4xl text-center">
+          Discover the future of blockchain with Blockforge
+        </h2>
         <div>
           <div>
             <img src="/assets/images/pill.png" alt="Pill image" />
