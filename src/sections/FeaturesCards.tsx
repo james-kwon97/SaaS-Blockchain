@@ -5,17 +5,19 @@ export const FeaturesCardsSection = () => {
         <h2 className="font-heading font-black text-4xl text-center">
           Discover the future of blockchain with Blockforge
         </h2>
-        <div>
+        <div className="mt-36">
           <div className="relative z-0 p-8">
             <div className="absolute size-16 rounded-xl bg-fuchsia-500 top-1.5 right-1.5 -z-10"></div>
             <div className="absolute inset-0 bg-zinc-800 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]"></div>
-            <img src="/assets/images/pill.png" alt="Pill image" />
+            <div className="flex justify-center -mt-28">
+              <img src="/assets/images/pill.png" alt="Pill image" className="size-40" />
+            </div>
             <h3 className="font-heading font-black text-3xl mt-12">Revolutionary Blockchain API</h3>
             <p className="text-lg text-zinc-400 mt-4">
               Effortlessly integrate and manage blockchain data with our cutting-edge API, designed
               for seamless connectivity.
             </p>
-            <div className="flex">
+            <div className="flex justify-between mt-12">
               <button className="text-sm font-heading uppercase font-extrabold tracking-wider text-fuchsia-500">
                 Learn More
               </button>
@@ -23,9 +25,9 @@ export const FeaturesCardsSection = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                strokeWidth={1.5}
+                strokeWidth={2}
                 stroke="currentColor"
-                className="size-6"
+                className="size-8"
               >
                 <path
                   strokeLinecap="round"
