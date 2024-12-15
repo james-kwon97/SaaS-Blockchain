@@ -10,7 +10,10 @@ export const FeaturesCardsSection = () => {
             <div className="absolute size-16 rounded-xl bg-fuchsia-500 top-1.5 right-1.5 -z-10"></div>
             <div className="absolute inset-0 bg-zinc-800 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]"></div>
             <div className="flex justify-center -mt-28">
-              <img src="/assets/images/pill.png" alt="Pill image" className="size-40" />
+              <div className="inline-flex relative">
+                <div className="absolute h-4 w-full top-[calc(100%+16px)] bg-zinc-950/70 rounded-[100%] [mask-image:radial-gradient(closest-side,black,transparent)]"></div>
+                <img src="/assets/images/pill.png" alt="Pill image" className="size-40" />
+              </div>
             </div>
             <h3 className="font-heading font-black text-3xl mt-12">Revolutionary Blockchain API</h3>
             <p className="text-lg text-zinc-400 mt-4">
