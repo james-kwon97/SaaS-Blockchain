@@ -35,7 +35,7 @@ export const FeaturesCardsSection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="size-8 text-zinc-500 group-hover:text-zinc-300 transition duration-300"
+                className="size-8 text-zinc-500 group-hover:text-zinc-300 transition duration-300 -translate-x-2 group-hover:translate-x-0"
               >
                 <path
                   strokeLinecap="round"
