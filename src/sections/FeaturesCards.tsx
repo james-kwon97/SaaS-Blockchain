@@ -1,3 +1,34 @@
+const cardData = [
+  {
+    image: '/assets/images/pill.png',
+    title: 'Revolutionary Blockchain API',
+    description:
+      'Effortlessly integrate and manage blockchain data with our cutting-edge API, designed for seamless connectivity.',
+    color: 'fuchsia',
+  },
+  {
+    image: '/assets/images/cuboid.png',
+    title: 'Decentralised Data Solutions',
+    description:
+      'Empower your applications with decentralised data solutions, ensuring security and transparency at every step.',
+    color: 'lime',
+  },
+  {
+    image: '/assets/images/cone.png',
+    title: 'Next-Gen Smart Contracts',
+    description:
+      'Unlock the potential of next-gen smart contracts with our robust and scalable API, tailored for modern blockchain needs.',
+    color: 'cyan',
+  },
+  {
+    image: '/assets/images/icosahedron.png',
+    title: 'Seamless Blockchain Integration',
+    description:
+      'Integrate blockchain technology seamlessly into your projects, with minimal effort and maximum efficiency.',
+    color: 'violet',
+  },
+];
+
 export const FeaturesCardsSection = () => {
   return (
     <section className="py-24">
