@@ -31,7 +31,7 @@ const cardData = [
 
 export const FeaturesCardsSection = () => {
   return (
-    <section className="py-24">
+    <section className="py-24 overflow-x-clip">
       <div className="container">
         <h2 className="font-heading font-black text-4xl text-center">
           Discover the future of blockchain with Blockforge.
