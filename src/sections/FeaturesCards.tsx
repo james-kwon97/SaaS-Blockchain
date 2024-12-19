@@ -42,8 +42,18 @@ export const FeaturesCardsSection = () => {
           <div className="flex flex-none gap-8">
             {cardData.map(({ image, title, description, color }) => (
               <div className="relative z-0 p-8 md:p-10 max-w-xs md:max-w-md group" key={title}>
-                <div className="absolute size-16 rounded-xl bg-fuchsia-500 top-1.5 right-1.5 -z-10 blur-lg opacity-0 group-hover:opacity-100 transition duration-300"></div>
-                <div className="absolute size-16 rounded-xl bg-fuchsia-500 group-hover:bg-fuchsia-400 transition duration-300 top-1.5 right-1.5 -z-10"></div>
+                <div
+                  className={twMerge(
+                    'absolute size-16 rounded-xl bg-fuchsia-500 top-1.5 right-1.5 -z-10 blur-lg opacity-0 group-hover:opacity-100 transition duration-300',
+                    color === 'lime' && 'bg-lime-500',
+                  )}
+                ></div>
+                <div
+                  className={twMerge(
+                    'absolute size-16 rounded-xl bg-fuchsia-500 group-hover:bg-fuchsia-400 transition duration-300 top-1.5 right-1.5 -z-10',
+                    color === 'lime' && 'bg-lime-500 group-hover:bg-lime-400',
+                  )}
+                ></div>
                 <div className="absolute inset-0 bg-zinc-800 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]"></div>
                 <div className="flex justify-center -mt-28">
                   <div className="inline-flex relative">
@@ -58,7 +68,12 @@ export const FeaturesCardsSection = () => {
                 <h3 className="font-heading font-black text-3xl mt-12">{title}</h3>
                 <p className="text-lg text-zinc-400 mt-4">{description}</p>
                 <div className="flex justify-between mt-12">
-                  <button className="text-sm font-heading uppercase font-extrabold tracking-wider text-fuchsia-500">
+                  <button
+                    className={twMerge(
+                      'text-sm font-heading uppercase font-extrabold tracking-wider text-fuchsia-500',
+                      color === 'lime' && 'text-lime-500',
+                    )}
+                  >
                     Learn More
                   </button>
                   <svg
