@@ -33,10 +33,10 @@ export const FeaturesCardsSection = () => {
   return (
     <section className="py-24 overflow-x-clip -mt-28">
       <div className="container">
-        <h2 className="font-heading font-black text-4xl md:text-5xl text-center">
+        <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-center">
           Discover the future of blockchain with Blockforge.
         </h2>
-        <div className="mt-36 flex">
+        <div className="mt-36 lg:mt-48 flex">
           <div className="flex flex-none gap-8">
             {cardData.map(({ image, title, description, color }) => (
               <div className="relative z-0 p-8 md:p-10 max-w-xs md:max-w-md group" key={title}>
