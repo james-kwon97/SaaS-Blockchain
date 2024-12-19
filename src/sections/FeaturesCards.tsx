@@ -1,3 +1,5 @@
+import { twMerge } from 'tailwind-merge';
+
 const cardData = [
   {
     image: '/assets/images/pill.png',
