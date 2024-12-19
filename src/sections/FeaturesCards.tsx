@@ -80,8 +80,8 @@ export const FeaturesCardsSection = () => {
         </div>
         <div className="flex justify-center mt-10">
           <div className="bg-zinc-950 inline-flex gap-4 p-2.5 rounded-full">
-            {[...new Array(4)].fill(0).map((_, i) => (
-              <div key={i} className="size-2.5 bg-zinc-500 rounded-full cursor-pointer"></div>
+            {cardData.map(({ title }) => (
+              <div key={title} className="size-2.5 bg-zinc-500 rounded-full cursor-pointer"></div>
             ))}
             <div></div>
           </div>
