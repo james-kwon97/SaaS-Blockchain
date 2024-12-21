@@ -27,7 +27,7 @@ export const FeaturesGrid = () => {
               </li>
             ))}
           </ul>
-          <div>
+          <div className="flex gap-8 mt-12">
             <CutCornerButton>Get Started</CutCornerButton>
             <TextButton>Learn More</TextButton>
           </div>
