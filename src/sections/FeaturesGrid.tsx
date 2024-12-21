@@ -1,4 +1,5 @@
 import { CutCornerButton } from '../components/CutCornerButton';
+import { TextButton } from '../components/TextButton';
 
 const listItems = [
   'Experience unparalleled security and scalability',
@@ -24,7 +25,7 @@ export const FeaturesGrid = () => {
         </ul>
         <div>
           <CutCornerButton>Get Started</CutCornerButton>
-          <button></button>
+          <TextButton>Learn More</TextButton>
         </div>
       </div>
     </section>
