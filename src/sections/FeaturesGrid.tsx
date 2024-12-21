@@ -1,3 +1,5 @@
+import { CutCornerButton } from '../components/CutCornerButton';
+
 const listItems = [
   'Experience unparalleled security and scalability',
   'Fully benefit from scalable network effects',
@@ -20,6 +22,10 @@ export const FeaturesGrid = () => {
             </li>
           ))}
         </ul>
+        <div>
+          <CutCornerButton>Get Started</CutCornerButton>
+          <button></button>
+        </div>
       </div>
     </section>
   );
