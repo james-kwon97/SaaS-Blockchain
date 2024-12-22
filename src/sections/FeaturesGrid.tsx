@@ -11,7 +11,7 @@ export const FeaturesGrid = () => {
   return (
     <section py-24>
       <div className="container">
-        <div className="flex flex-col gap-48">
+        <div className="flex flex-col gap-56">
           <div>
             <h2 className="font-heading font-black text-4xl">
               Empowering the future of blockchain.
@@ -36,16 +36,18 @@ export const FeaturesGrid = () => {
             </div>
           </div>
           <div>
-            <h2>Blockforge leads the way.</h2>
-            <p>
-              Blockforge is dedicated to supporting the evolution of Web3 applications by delivering
-              the necessary infrastructure and security for Web3.
-            </p>
-            <p>
-              Blockforge champions Web3 for everyone. As a decentralised blockchain scaling
-              platform, Blockforge enables developers to create scalable, user-friendly apps with
-              low transaction costs, all while ensuring power security.
-            </p>
+            <h2 className="font-heading font-black text-4xl">Blockforge leads the way.</h2>
+            <div className="flex flex-col text-xl text-zinc-400 mt-6 gap-6">
+              <p>
+                Blockforge is dedicated to supporting the evolution of Web3 applications by
+                delivering the necessary infrastructure and security for Web3.
+              </p>
+              <p>
+                Blockforge champions Web3 for everyone. As a decentralised blockchain scaling
+                platform, Blockforge enables developers to create scalable, user-friendly apps with
+                low transaction costs, all while ensuring power security.
+              </p>
+            </div>
             <div>
               <CutCornerButton>Get Started</CutCornerButton>
               <TextButton>Learn More</TextButton>
