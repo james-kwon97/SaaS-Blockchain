@@ -41,8 +41,12 @@ export const FeaturesGrid = () => {
           <p>
             Blockforge champions Web3 for everyone. As a decentralised blockchain scaling platform,
             Blockforge enables developers to create scalable, user-friendly apps with low
-            transaction costs, all while ensuring
+            transaction costs, all while ensuring power security.
           </p>
+          <div>
+            <CutCornerButton>Get Started</CutCornerButton>
+            <TextButton>Learn More</TextButton>
+          </div>
         </div>
       </div>
     </section>
