@@ -12,7 +12,7 @@ export const FeaturesGrid = () => {
     <section className="py-24 overflow-x-clip">
       <div className="container">
         <div className="flex flex-col gap-56">
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3 gap-8">
             <div className="cols-span-2">
               <h2 className="font-heading font-black text-4xl md:text-5xl">
                 Empowering the future of blockchain.
