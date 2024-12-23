@@ -14,7 +14,7 @@ export const FeaturesGrid = () => {
         <div className="flex flex-col gap-56">
           <div className="grid grid-cols-3">
             <div className="cols-span-2">
-              <h2 className="font-heading font-black text-4xl">
+              <h2 className="font-heading font-black text-4xl md:text-5xl">
                 Empowering the future of blockchain.
               </h2>
               <p className="text-xl text-zinc-400 mt-8">
