@@ -50,7 +50,10 @@ export const FeaturesGrid = () => {
                 />
               </div>
             </div>
-            <div>
+          </div>
+          <div className="grid grid-cols-3 gap-8">
+            <div></div>
+            <div className="col-span-2">
               <h2 className="font-heading font-black text-4xl">Blockforge leads the way.</h2>
               <div className="flex flex-col text-xl text-zinc-400 mt-6 gap-6">
                 <p>
