@@ -11,7 +11,7 @@ export const FeaturesGrid = () => {
   return (
     <section className="py-24 overflow-x-clip">
       <div className="container">
-        <div className="flex flex-col gap-56">
+        <div className="flex flex-col gap-56 md:gap-48">
           <div className="grid grid-cols-3 gap-8">
             <div className="cols-span-2">
               <h2 className="font-heading font-black text-4xl md:text-5xl">
@@ -53,11 +53,11 @@ export const FeaturesGrid = () => {
           </div>
           <div className="grid grid-cols-3 gap-8">
             <div className="relative">
-              <div className="absolute right-0 rotate-12">
+              <div className="absolute right-0 z-0">
                 <img
                   src="/assets/images/cone.png"
                   alt="Cone 3D shape"
-                  className="size-96 max-w-none z-0"
+                  className="size-96 max-w-none rotate-12"
                 />
                 <img
                   src="/assets/images/hemisphere.png"
@@ -67,7 +67,9 @@ export const FeaturesGrid = () => {
               </div>
             </div>
             <div className="col-span-2">
-              <h2 className="font-heading font-black text-4xl">Blockforge leads the way.</h2>
+              <h2 className="font-heading font-black text-4xl md:text-5xl">
+                Blockforge leads the way.
+              </h2>
               <div className="flex flex-col text-xl text-zinc-400 mt-6 gap-6">
                 <p>
                   Blockforge is dedicated to supporting the evolution of Web3 applications by
