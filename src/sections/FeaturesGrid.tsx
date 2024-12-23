@@ -9,7 +9,7 @@ const listItems = [
 
 export const FeaturesGrid = () => {
   return (
-    <section py-24>
+    <section className="py-24 overflow-x-clip">
       <div className="container">
         <div className="flex flex-col gap-56">
           <div className="grid grid-cols-3">
@@ -37,12 +37,18 @@ export const FeaturesGrid = () => {
               </div>
             </div>
             <div>
-              <img
-                src="/assets/images/torus-knot.png"
-                alt="Torus Knot 3D image"
-                className="size-96 max-w-none"
-              />
-              <img src="/assets/images/hemisphere.png" alt="Hemisphere 3D shape" />
+              <div className="relative inline-flex z-0">
+                <img
+                  src="/assets/images/torus-knot.png"
+                  alt="Torus Knot 3D shape"
+                  className="size-96 max-w-none"
+                />
+                <img
+                  src="/assets/images/hemisphere.png"
+                  alt="Hemisphere 3D shape"
+                  className="absolute size-96 top-3/4 -z-10 scale-x-[-1]"
+                />
+              </div>
             </div>
             <div>
               <h2 className="font-heading font-black text-4xl">Blockforge leads the way.</h2>
