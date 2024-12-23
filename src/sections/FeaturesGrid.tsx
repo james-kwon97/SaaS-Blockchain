@@ -52,9 +52,19 @@ export const FeaturesGrid = () => {
             </div>
           </div>
           <div className="grid grid-cols-3 gap-8">
-            <div>
-              <img src="/assets/images/cone.png" alt="Cone 3D shape" />
-              <img src="/assets/images/hemisphere.png" alt="Hemisphere 3D shape" />
+            <div className="relative">
+              <div className="absolute right-0 rotate-12">
+                <img
+                  src="/assets/images/cone.png"
+                  alt="Cone 3D shape"
+                  className="size-96 max-w-none z-0"
+                />
+                <img
+                  src="/assets/images/hemisphere.png"
+                  alt="Hemisphere 3D shape"
+                  className="absolute top-3/4 -z-10"
+                />
+              </div>
             </div>
             <div className="col-span-2">
               <h2 className="font-heading font-black text-4xl">Blockforge leads the way.</h2>
