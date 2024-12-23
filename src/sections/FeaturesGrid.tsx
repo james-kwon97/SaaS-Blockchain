@@ -37,7 +37,11 @@ export const FeaturesGrid = () => {
               </div>
             </div>
             <div>
-              <img src="/assets/images/torus-knot.png" alt="Torus Knot 3D image" />
+              <img
+                src="/assets/images/torus-knot.png"
+                alt="Torus Knot 3D image"
+                className="size-96 max-w-none"
+              />
               <img src="/assets/images/hemisphere.png" alt="Hemisphere 3D shape" />
             </div>
             <div>
