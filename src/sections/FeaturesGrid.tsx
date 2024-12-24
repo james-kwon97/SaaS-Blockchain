@@ -11,13 +11,13 @@ export const FeaturesGrid = () => {
   return (
     <section className="py-24 overflow-x-clip">
       <div className="container">
-        <div className="flex flex-col gap-56 md:gap-48">
+        <div className="flex flex-col gap-56 md:gap-48 lg:gap-80">
           <div className="grid grid-cols-3 gap-8">
             <div className="cols-span-2">
-              <h2 className="font-heading font-black text-4xl md:text-5xl">
+              <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl">
                 Empowering the future of blockchain.
               </h2>
-              <p className="text-xl text-zinc-400 mt-8">
+              <p className="text-xl lg:text-2xl text-zinc-400 mt-8">
                 Blockforge provides robust and secure infrastructure to support the next generation
                 of decentralised applications.
               </p>
@@ -67,10 +67,10 @@ export const FeaturesGrid = () => {
               </div>
             </div>
             <div className="col-span-2">
-              <h2 className="font-heading font-black text-4xl md:text-5xl">
+              <h2 className="font-heading font-black text-4xl md:text-5xl lg:text-6xl">
                 Blockforge leads the way.
               </h2>
-              <div className="flex flex-col text-xl text-zinc-400 mt-6 gap-6">
+              <div className="flex flex-col text-xl lg:text-2xl text-zinc-400 mt-6 gap-6">
                 <p>
                   Blockforge is dedicated to supporting the evolution of Web3 applications by
                   delivering the necessary infrastructure and security for Web3.
