@@ -1,13 +1,15 @@
 export const LatestPosts = () => {
   return (
-    <section>
+    <section className="py-60">
       <div className="container">
-        <h2>Your portal to everything blockchain.</h2>
-        <p>
+        <h2 className="font-heading font-black text-4xl text-center">
+          Your portal to everything blockchain.
+        </h2>
+        <p className="text-xl text-center text-zinc-400 mt-8">
           Keep up with the newest trends, updates, and insights in the blockchain world, updated
           weekly.
         </p>
-        <div>
+        <div className="mt-16">
           {[...new Array(4)].fill(0).map((item, itemIndex) => (
             <div>
               <div>Technology</div>
