@@ -8,18 +8,20 @@ export const LatestPosts = () => {
           weekly.
         </p>
         <div>
-          <div>
-            <div>Technology</div>
-            <h3>Regulatory Challenges Facing Blockchain</h3>
-            <p>
-              Understanding the regulatory landscape surrounding blockchain and what it means for
-              the future of this technology.
-            </p>
+          {[...new Array(4)].fill(0).map((item, itemIndex) => (
             <div>
-              <button>Read more</button>
-              <div>arrow</div>
+              <div>Technology</div>
+              <h3>Regulatory Challenges Facing Blockchain</h3>
+              <p>
+                Understanding the regulatory landscape surrounding blockchain and what it means for
+                the future of this technology.
+              </p>
+              <div>
+                <button>Read more</button>
+                <div>arrow</div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
