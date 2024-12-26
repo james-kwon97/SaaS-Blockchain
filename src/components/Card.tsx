@@ -2,8 +2,10 @@ import type { ComponentPropsWithoutRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { TextButton } from './TextButton';
 
-export const Card = (props: ComponentPropsWithoutRef<'div'> & { color?: string }) => {
-  const { color, children, className } = props;
+export const Card = (
+  props: ComponentPropsWithoutRef<'div'> & { color?: string; buttonText?: string },
+) => {
+  const { color, children, className, buttonText } = props;
   return (
     <div className={twMerge('relative z-0 p-8 md:p-10 group', className)}>
       <div
@@ -26,7 +28,7 @@ export const Card = (props: ComponentPropsWithoutRef<'div'> & { color?: string }
         {children}
       </div>
       <div className="flex justify-between mt-12">
-        <TextButton color={color}>Learn More</TextButton>
+        <TextButton color={color}>{buttonText}</TextButton>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
