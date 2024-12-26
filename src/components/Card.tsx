@@ -28,7 +28,7 @@ export const Card = (
         {children}
       </div>
       <div className="flex justify-between mt-12">
-        <TextButton color={color}>{buttonText}</TextButton>
+        <TextButton color={color}>{buttonText || 'Learn More'}</TextButton>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
