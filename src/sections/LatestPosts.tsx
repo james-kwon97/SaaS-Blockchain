@@ -1,3 +1,5 @@
+import { Card } from '../components/Card';
+
 export const LatestPosts = () => {
   return (
     <section className="py-60">
@@ -11,7 +13,7 @@ export const LatestPosts = () => {
         </p>
         <div className="mt-16">
           {[...new Array(4)].fill(0).map((item, itemIndex) => (
-            <div>
+            <Card key={itemIndex} buttonText="Read More">
               <div>Technology</div>
               <h3>Regulatory Challenges Facing Blockchain</h3>
               <p>
@@ -22,7 +24,7 @@ export const LatestPosts = () => {
                 <button>Read more</button>
                 <div>arrow</div>
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </div>
