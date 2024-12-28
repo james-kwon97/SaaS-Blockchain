@@ -1,6 +1,7 @@
+import type { CollectionEntry } from 'astro:content';
 import { Card } from '../components/Card';
 
-export const LatestPosts = () => {
+export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) => {
   return (
     <section className="py-60">
       <div className="container">
