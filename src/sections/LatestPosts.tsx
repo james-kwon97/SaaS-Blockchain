@@ -19,7 +19,7 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
           {latestPosts.map(({ data: { title, description, category } }, postIndex) => (
             <Card key={postIndex} buttonText="Read More" color={getPostColorFromCategory(category)}>
               <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
-              <h3 className="font-heading font-black text-3xl mt-4">{title}</h3>
+              <h3 className="font-heading font-black text-3xl mt-3">{title}</h3>
               <p className="text-lg text-zinc-400 mt-6">{description}</p>
             </Card>
           ))}
