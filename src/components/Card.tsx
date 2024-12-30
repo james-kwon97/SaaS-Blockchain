@@ -24,9 +24,8 @@ export const Card = (
           color === 'violet' && 'bg-violet-500 group-hover:bg-violet-400',
         )}
       ></div>
-      <div className="absolute inset-0 bg-zinc-800 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]">
-        {children}
-      </div>
+      <div className="absolute inset-0 bg-zinc-800 -z-10 rounded-2xl [mask-image:linear-gradient(225deg,transparent,transparent_40px,black_40px)]"></div>
+      <div>{children}</div>
       <div className="flex justify-between mt-12">
         <TextButton color={color}>{buttonText || 'Learn More'}</TextButton>
         <svg
