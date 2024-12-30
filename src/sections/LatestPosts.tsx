@@ -1,6 +1,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { Card } from '../components/Card';
 import { getPostColorFromCategory } from '../utils/postUtils';
+import { Tag } from '../components/Tag';
 
 export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) => {
   const { latestPosts } = props;
@@ -17,9 +18,7 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
         <div className="mt-16 flex flex-col gap-8">
           {latestPosts.map(({ data: { title, description, category } }, postIndex) => (
             <Card key={postIndex} buttonText="Read More" color={getPostColorFromCategory(category)}>
-              <div className="px-3 py-1.5 uppercase font-heading font-extrabold tracking-wider text-xs bg-fuchsia-500/15 text-fuchsia-500 inline-flex rounded-full">
-                {category}
-              </div>
+              <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
               <h3 className="font-heading font-black text-3xl mt-4">{title}</h3>
               <p className="text-lg text-zinc-400 mt-6">{description}</p>
             </Card>
