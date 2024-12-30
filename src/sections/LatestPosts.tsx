@@ -2,6 +2,7 @@ import type { CollectionEntry } from 'astro:content';
 import { Card } from '../components/Card';
 import { getPostColorFromCategory } from '../utils/postUtils';
 import { Tag } from '../components/Tag';
+import { CutCornerButton } from '../components/CutCornerButton';
 
 export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) => {
   const { latestPosts } = props;
@@ -23,6 +24,9 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
               <p className="text-lg text-zinc-400 mt-6">{description}</p>
             </Card>
           ))}
+        </div>
+        <div className="flex justify-center mt-48">
+          <CutCornerButton>Read the Blog</CutCornerButton>
         </div>
       </div>
     </section>
