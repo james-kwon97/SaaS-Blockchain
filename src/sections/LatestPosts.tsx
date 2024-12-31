@@ -32,7 +32,7 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
               </Card>
             ))}
           </div>
-          <div>
+          <div className="hidden md:block">
             {latestPosts.map(({ data: { title, description, category } }, postIndex) => (
               <Card
                 key={postIndex}
