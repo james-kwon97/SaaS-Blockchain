@@ -32,6 +32,20 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
               </Card>
             ))}
           </div>
+          <div>
+            {latestPosts.map(({ data: { title, description, category } }, postIndex) => (
+              <Card
+                key={postIndex}
+                buttonText="Read More"
+                color={getPostColorFromCategory(category)}
+                className={twMerge((postIndex === 0 || postIndex === 2) && 'md:hidden')}
+              >
+                <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
+                <h3 className="font-heading font-black text-3xl mt-3">{title}</h3>
+                <p className="text-lg text-zinc-400 mt-6">{description}</p>
+              </Card>
+            ))}
+          </div>
         </div>
         <div className="flex justify-center mt-48">
           <CutCornerButton>Read the Blog</CutCornerButton>
