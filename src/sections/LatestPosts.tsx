@@ -17,8 +17,8 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
           Keep up with the newest trends, updates, and insights in the blockchain world, updated
           weekly.
         </p>
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
+        <div className="mt-16 md:mt-28 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="flex flex-col gap-8">
             {latestPosts.map(({ data: { title, description, category } }, postIndex) => (
               <Card
                 key={postIndex}
@@ -32,7 +32,8 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
               </Card>
             ))}
           </div>
-          <div className="hidden md:block">
+
+          <div className="hidden md:flex flex-col gap-8 mt-16">
             {latestPosts.map(({ data: { title, description, category } }, postIndex) => (
               <Card
                 key={postIndex}
@@ -47,7 +48,7 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
             ))}
           </div>
         </div>
-        <div className="flex justify-center mt-48">
+        <div className="flex justify-center mt-48 md:mt-32">
           <CutCornerButton>Read the Blog</CutCornerButton>
         </div>
       </div>
