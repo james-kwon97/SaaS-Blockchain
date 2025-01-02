@@ -19,7 +19,7 @@ export const TestimonialsSection = () => {
   return (
     <section className="py-32 bg-zinc-800">
       <div className="container">
-        <div className="grid grid-cols-1 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {testimonials.map((testimonial,testimonialIndex) => (<div>
             <blockquote key={testimonialIndex}>
               <p className="font-heading text-3xl font-black">&ldquo;{testimonial.text}&rdquo;</p>
