@@ -26,7 +26,7 @@ export const TestimonialsSection = () => {
               <cite className="mt-8 block">
                 <div className="flex gap-3 items-center">
                   <div>
-                    <div className="size-16 bg-zinc-700 rounded-full" style={{backgroundImage: `url(${testimonial.avatarImage})`}}></div>
+                    <div className="size-16 bg-zinc-700 rounded-full bg-cover" style={{backgroundImage: `url(${testimonial.avatarImage})`}}></div>
                   </div>
                   <div className="text-lg not-italic font-black ">{testimonial.name}</div>
                   <div className="text-zinc-400 not-italic">{testimonial.title}</div>
