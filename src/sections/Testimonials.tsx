@@ -1,3 +1,12 @@
+const testimonials = [
+  {
+    text: 'The user experience is phenomenal, and the support team is always there to help. Highly recommended!',
+    name: 'Erica Wyatt',
+    title: 'Product Manager - BlockLink',
+    avatarImage: '/assets/images/avatar-erica-wyatt.jpg'
+  },{},{}
+]
+
 export const TestimonialsSection = () => {
   return (
     <section className="py-32 bg-zinc-800">
