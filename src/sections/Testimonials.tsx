@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge"
+
 const testimonials = [
   {
     text: 'The user experience is phenomenal, and the support team is always there to help. Highly recommended!',
@@ -21,7 +23,7 @@ export const TestimonialsSection = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           {testimonials.map((testimonial,testimonialIndex) => (<div>
-            <blockquote key={testimonialIndex}>
+            <blockquote key={testimonialIndex} className={twMerge(testimonialIndex === 2 && 'md:hidden lg:block')}>
               <p className="font-heading text-3xl font-black">&ldquo;{testimonial.text}&rdquo;</p>
               <cite className="mt-8 block">
                 <div className="flex gap-3 items-center">
