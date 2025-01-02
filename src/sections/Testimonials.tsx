@@ -12,8 +12,8 @@ export const TestimonialsSection = () => {
     <section className="py-32 bg-zinc-800">
       <div className="container">
         <div className="grid grid-cols-1 gap-16">
-          {[...new Array(3)].fill(0).map((_,index) => (<div>
-            <blockquote>
+          {testimonials.map((testimonial,testimonialIndex) => (<div>
+            <blockquote key={testimonialIndex}>
               <p className="font-heading text-3xl font-black">&ldquo;The user experience is phenomenal, and the support team is always there to help. Highly recommended!&rdquo;</p>
               <cite className="mt-8 block">
                 <div className="flex gap-3 items-center">
