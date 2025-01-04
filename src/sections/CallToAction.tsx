@@ -1,3 +1,11 @@
+import { CutCornerButton } from "../components/CutCornerButton"
+
 export const CallToAction = () => {
-  return <section>call to action</section>
+  return <section>
+    <div className="container">
+      <h2>Ready to get started?</h2>
+      <p>Start building using blockchain technology, with Blockforge.</p>
+      <CutCornerButton>Get Started</CutCornerButton>
+    </div>
+  </section>
 }
