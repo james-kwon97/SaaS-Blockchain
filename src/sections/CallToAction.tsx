@@ -5,7 +5,9 @@ export const CallToAction = () => {
     <div className="container">
       <h2 className="font-heading font-black text-4xl text-center">Ready to <span className="block"></span>get started?</h2>
       <p className="text-xl text-zinc-400 text-center mt-8">Start building using blockchain technology, with Blockforge.</p>
-      <CutCornerButton>Get Started</CutCornerButton>
+      <div className="flex justify-center mt-12">
+        <CutCornerButton>Get Started</CutCornerButton>
+      </div>
     </div>
   </section>
 }
