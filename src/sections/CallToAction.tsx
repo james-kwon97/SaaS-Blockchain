@@ -2,7 +2,7 @@ import { CutCornerButton } from "../components/CutCornerButton"
 import {Hexagon} from "../components/Hexagon"
 
 export const CallToAction = () => {
-  return <section className="py-60">
+  return <section className="py-60 overflow-hidden">
     <div className="container">
       <div className="relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
