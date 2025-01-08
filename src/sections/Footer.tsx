@@ -13,7 +13,7 @@ const socialIcons = [
 export const Footer = () => {
   return (
   
-  <footer className="py-24">
+  <footer className="py-24 bg-zinc-950">
     <div className="container">
       <div>
         <div>
@@ -29,7 +29,7 @@ export const Footer = () => {
       </div>
       <div className="mt-12">
         <p className="text-zinc-400">&copy; 2025 Blockforge. All rights reserved.</p>
-        <div className="mt-4">
+        <div className="mt-4 flex gap-6">
           {socialIcons.map((icon, iconIndex) => (<div className="inline-flex size-10 bg-zinc-800 rounded-full items-center justify-center">{icon.icon}</div>))}
         </div>
       </div>
