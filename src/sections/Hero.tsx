@@ -1,9 +1,12 @@
+import { useRef } from 'react';
 import { Circle } from '../components/Circle';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { Hexagon } from '../components/Hexagon';
 import { motion } from 'framer-motion';
 
 export const HeroSection = () => {
+  const icosahedronRef = useRef(null);
+
   return (
     <section className="py-24 md:py-52 overflow-x-clip">
       <div className="container">
@@ -46,16 +49,18 @@ export const HeroSection = () => {
                 <img src="/assets/images/torus.png" alt="Torus 3D image" className="size-[140px]" />
               </Circle>
             </div>
-            <img
-              src="/assets/images/icosahedron.png"
-              alt=""
-              className="absolute w-[calc(100%+100px)] max-w-none -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 saturate-[10%] brightness-[4%] hue-rotate-[240deg]"
-            />
-            <img
-              src="/assets/images/icosahedron.png"
-              alt="Icosahedron 3D Image"
-              className="w-[500px]"
-            />
+            <div className="inline-flex">
+              <img
+                src="/assets/images/icosahedron.png"
+                alt=""
+                className="absolute w-[calc(100%+100px)] max-w-none -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 saturate-[10%] brightness-[4%] hue-rotate-[240deg]"
+              />
+              <img
+                src="/assets/images/icosahedron.png"
+                alt="Icosahedron 3D Image"
+                className="w-[500px]"
+              />
+            </div>
           </div>
         </div>
         <div className="flex justify-center flex-col items-center mt-40 md:mt-80 gap-4">
