@@ -1,6 +1,7 @@
 import { Circle } from '../components/Circle';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { Hexagon } from '../components/Hexagon';
+import { motion } from 'framer-motion';
 
 export const HeroSection = () => {
   return (
