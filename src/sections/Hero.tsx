@@ -7,7 +7,10 @@ import { motion, useScroll } from 'framer-motion';
 export const HeroSection = () => {
   const icosahedronRef = useRef(null);
 
-  useScroll({ target: icosahedronRef, offset: ['start end'] });
+  const { scrollYProgress } = useScroll({
+    target: icosahedronRef,
+    offset: ['start end', 'end start'],
+  });
 
   return (
     <section className="py-24 md:py-52 overflow-x-clip">
