@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const HeroSection = () => {
   const icosahedronRef = useRef(null);
+  const cubeRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: icosahedronRef,
@@ -44,10 +45,11 @@ export const HeroSection = () => {
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute left-[200px] top-[270px]">
-                <img
+                <motion.img
                   src="/assets/images/cuboid.png"
                   alt="Cuboid 3D image"
                   className="size-[140px]"
+                  ref={cubeRef}
                 />
               </Circle>
             </div>
