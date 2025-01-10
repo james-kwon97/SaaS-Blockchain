@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Circle } from '../components/Circle';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { Hexagon } from '../components/Hexagon';
-import { motion, useScroll } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const HeroSection = () => {
   const icosahedronRef = useRef(null);
@@ -11,6 +11,8 @@ export const HeroSection = () => {
     target: icosahedronRef,
     offset: ['start end', 'end start'],
   });
+
+  const icosahedronRotate = useTransform(scrollYProgress, [0, 1], [30, -45]);
 
   return (
     <section className="py-24 md:py-52 overflow-x-clip">
@@ -54,7 +56,11 @@ export const HeroSection = () => {
                 <img src="/assets/images/torus.png" alt="Torus 3D image" className="size-[140px]" />
               </Circle>
             </div>
-            <div className="inline-flex" ref={icosahedronRef}>
+            <motion.div
+              className="inline-flex"
+              style={{ rotate: icosahedronRotate }}
+              ref={icosahedronRef}
+            >
               <img
                 src="/assets/images/icosahedron.png"
                 alt=""
@@ -65,7 +71,7 @@ export const HeroSection = () => {
                 alt="Icosahedron 3D Image"
                 className="w-[500px]"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="flex justify-center flex-col items-center mt-40 md:mt-80 gap-4">
