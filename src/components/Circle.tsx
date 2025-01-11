@@ -11,7 +11,11 @@ export const Circle = (props: ComponentPropsWithoutRef<'div'>) => {
         className,
       )}
     >
-      <motion.div className="absolute inset-0 rounded-full outline outline-[6px] -outline-offset-[6px] outline-fuchsia-500/10 border-[6px] border-transparent border-t-fuchsia-500/30" />
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ ease: 'linear', duration: 15, repeat: Infinity }}
+        className="absolute inset-0 rounded-full outline outline-[6px] -outline-offset-[6px] outline-fuchsia-500/10 border-[6px] border-transparent border-t-fuchsia-500/30"
+      />
       {children}
     </div>
   );
