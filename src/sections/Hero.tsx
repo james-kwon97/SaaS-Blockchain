@@ -8,6 +8,7 @@ export const HeroSection = () => {
   const icosahedronRef = useRef(null);
   const cubeRef = useRef(null);
   const torusRef = useRef(null);
+  const cuboidRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: icosahedronRef,
@@ -24,9 +25,15 @@ export const HeroSection = () => {
     offset: ['start end', 'end start'],
   });
 
+  const { scrollYProgress: cuboidScrollYProgress } = useScroll({
+    target: cuboidRef,
+    offset: ['start end', 'end start'],
+  });
+
   const icosahedronRotate = useTransform(scrollYProgress, [0, 1], [30, -45]);
   const cubeRotate = useTransform(cubeScrollYProgress, [0, 1], [100, -45]);
   const torusRotate = useTransform(torusScrollYProgress, [0, 1], [20, -20]);
+  const cuboidRotate = useTransform(cuboidScrollYProgress, [0, 1], [20, -20]);
 
   return (
     <section className="py-24 md:py-52 overflow-x-clip">
@@ -64,10 +71,12 @@ export const HeroSection = () => {
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
               <Circle className="absolute left-[200px] top-[270px]">
-                <img
+                <motion.img
                   src="/assets/images/cuboid.png"
                   alt="Cuboid 3D image"
                   className="size-[140px]"
+                  style={{ rotate: cuboidRotate }}
+                  ref={cuboidRef}
                 />
               </Circle>
             </div>
