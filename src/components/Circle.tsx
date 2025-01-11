@@ -1,5 +1,6 @@
 import type { ComponentPropsWithoutRef } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { motion } from 'framer-motion';
 
 export const Circle = (props: ComponentPropsWithoutRef<'div'>) => {
   const { className, children } = props;
@@ -10,7 +11,7 @@ export const Circle = (props: ComponentPropsWithoutRef<'div'>) => {
         className,
       )}
     >
-      <div className="absolute inset-0 rounded-full outline outline-[6px] -outline-offset-[6px] outline-fuchsia-500/10 border-[6px] border-transparent border-t-fuchsia-500"></div>
+      <motion.div className="absolute inset-0 rounded-full outline outline-[6px] -outline-offset-[6px] outline-fuchsia-500/10 border-[6px] border-transparent border-t-fuchsia-500/30" />
       {children}
     </div>
   );
