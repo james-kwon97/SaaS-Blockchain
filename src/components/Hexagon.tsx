@@ -43,9 +43,11 @@ export const Hexagon = (props: ComponentPropsWithoutRef<'svg'> & { size?: number
           strokeWidth="6"
           xmlns="http://www.w3.org/2000/svg"
           className={twMerge('text-fuchsia-500/10 -rotate-6', className)}
+          initial={{ strokeDashoffset: 0 }}
+          animate={{ strokeDashoffset: totalPathLength * -1 }}
+          transition={{ repeat: Infinity, duration: 30, ease: 'linear' }}
           style={{
             strokeDasharray: `500 ${totalPathLength - 500}`,
-            strokeDashoffset: '-2800',
             height: size,
             width: size,
           }}
