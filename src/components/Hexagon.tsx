@@ -3,9 +3,9 @@ import { twMerge } from 'tailwind-merge';
 import { motion } from 'framer-motion';
 
 export const Hexagon = (
-  props: ComponentPropsWithoutRef<'svg'> & { size?: number; reverse?: boolean },
+  props: ComponentPropsWithoutRef<'svg'> & { size?: number; reverse?: boolean; duration?: number },
 ) => {
-  const { className, size = 800, reverse = false } = props;
+  const { className, size = 800, reverse = false, duration = 30 } = props;
   const pathRef = useRef<SVGPathElement>(null);
   const [totalPathLength, setTotalPathLength] = useState<number>();
 
