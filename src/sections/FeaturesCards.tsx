@@ -71,6 +71,7 @@ export const FeaturesCardsSection = () => {
                   'size-2.5 bg-zinc-500 rounded-full cursor-pointer',
                   cardIndex === selectedCardIndex && 'bg-zinc-300',
                 )}
+                onClick={() => setSelectedCardIndex(cardIndex)}
               ></div>
             ))}
             <div></div>
