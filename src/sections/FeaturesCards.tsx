@@ -64,8 +64,14 @@ export const FeaturesCardsSection = () => {
         </div>
         <div className="flex justify-center mt-10">
           <div className="bg-zinc-950 inline-flex gap-4 p-2.5 rounded-full">
-            {cardData.map(({ title }) => (
-              <div key={title} className="size-2.5 bg-zinc-500 rounded-full cursor-pointer"></div>
+            {cardData.map(({ title }, cardIndex) => (
+              <div
+                key={title}
+                className={twMerge(
+                  'size-2.5 bg-zinc-500 rounded-full cursor-pointer',
+                  cardIndex === selectedCardIndex && 'bg-zinc-300',
+                )}
+              ></div>
             ))}
             <div></div>
           </div>
