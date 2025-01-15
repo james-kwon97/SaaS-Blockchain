@@ -1,6 +1,7 @@
 import { twMerge } from 'tailwind-merge';
 import { TextButton } from '../components/TextButton';
 import { Card } from '../components/Card';
+import { useState } from 'react';
 
 const cardData = [
   {
@@ -34,6 +35,7 @@ const cardData = [
 ];
 
 export const FeaturesCardsSection = () => {
+  const [selectedCardIndex, setSelectedCardIndex] = useState(0);
   return (
     <section className="py-24 overflow-x-clip md:-mt-28">
       <div className="container">
