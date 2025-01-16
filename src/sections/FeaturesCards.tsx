@@ -1,7 +1,7 @@
 import { twMerge } from 'tailwind-merge';
 import { TextButton } from '../components/TextButton';
 import { Card } from '../components/Card';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const cardData = [
   {
@@ -36,6 +36,13 @@ const cardData = [
 
 export const FeaturesCardsSection = () => {
   const [selectedCardIndex, setSelectedCardIndex] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSelectedCardIndex((curr) => (curr === cardData.length - 1 ? 0 : curr + 1));
+    }, 2000);
+  }, [selectedCardIndex]);
+
   return (
     <section className="py-24 overflow-x-clip md:-mt-28">
       <div className="container">
