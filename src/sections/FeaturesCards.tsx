@@ -44,21 +44,23 @@ export const FeaturesCardsSection = () => {
         </h2>
         <div className="mt-36 lg:mt-48 flex">
           <div className="flex flex-none gap-8">
-            {cardData.map(({ image, title, description, color }) => (
-              <Card key={title} className="max-w-xs md:max-w-md">
-                <div className="flex justify-center -mt-28">
-                  <div className="inline-flex relative">
-                    <div className="absolute h-4 w-full top-[calc(100%+16px)] bg-zinc-950/70 group-hover:bg-zinc-950/30 transition duration-300 rounded-[100%] [mask-image:radial-gradient(closest-side,black,transparent)]"></div>
-                    <img
-                      src={image}
-                      alt="Pill image"
-                      className="size-40 group-hover:-translate-y-6 transition duration-300"
-                    />
+            {cardData.map(({ image, title, description, color }, cardIndex) => (
+              <div style={{ transform: `translateX(calc((-100% - 2rem) * ${selectedCardIndex})` }}>
+                <Card key={title} className="max-w-xs md:max-w-md">
+                  <div className="flex justify-center -mt-28">
+                    <div className="inline-flex relative">
+                      <div className="absolute h-4 w-full top-[calc(100%+16px)] bg-zinc-950/70 group-hover:bg-zinc-950/30 transition duration-300 rounded-[100%] [mask-image:radial-gradient(closest-side,black,transparent)]"></div>
+                      <img
+                        src={image}
+                        alt="Pill image"
+                        className="size-40 group-hover:-translate-y-6 transition duration-300"
+                      />
+                    </div>
                   </div>
-                </div>
-                <h3 className="font-heading font-black text-3xl mt-12">{title}</h3>
-                <p className="text-lg text-zinc-400 mt-4">{description}</p>
-              </Card>
+                  <h3 className="font-heading font-black text-3xl mt-12">{title}</h3>
+                  <p className="text-lg text-zinc-400 mt-4">{description}</p>
+                </Card>
+              </div>
             ))}
           </div>
         </div>
