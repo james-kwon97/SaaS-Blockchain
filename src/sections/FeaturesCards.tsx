@@ -45,7 +45,10 @@ export const FeaturesCardsSection = () => {
         <div className="mt-36 lg:mt-48 flex">
           <div className="flex flex-none gap-8">
             {cardData.map(({ image, title, description, color }, cardIndex) => (
-              <div style={{ transform: `translateX(calc((-100% - 2rem) * ${selectedCardIndex})` }}>
+              <div
+                className="inline-flex transition-all duration-500"
+                style={{ transform: `translateX(calc((-100% - 2rem) * ${selectedCardIndex})` }}
+              >
                 <Card key={title} className="max-w-xs md:max-w-md">
                   <div className="flex justify-center -mt-28">
                     <div className="inline-flex relative">
