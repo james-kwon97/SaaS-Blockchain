@@ -40,7 +40,7 @@ export const FeaturesCardsSection = () => {
   useEffect(() => {
     setTimeout(() => {
       setSelectedCardIndex((curr) => (curr === cardData.length - 1 ? 0 : curr + 1));
-    }, 2000);
+    }, 3000);
   }, [selectedCardIndex]);
 
   return (
