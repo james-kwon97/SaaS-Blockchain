@@ -38,9 +38,12 @@ export const FeaturesCardsSection = () => {
   const [selectedCardIndex, setSelectedCardIndex] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setSelectedCardIndex((curr) => (curr === cardData.length - 1 ? 0 : curr + 1));
     }, 3000);
+    return () => {
+      clearTimeout(timeout);
+    };
   }, [selectedCardIndex]);
 
   return (
