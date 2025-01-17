@@ -39,13 +39,14 @@ export const FeaturesCardsSection = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
+    if (isHovered) return;
     const timeout = setTimeout(() => {
       setSelectedCardIndex((curr) => (curr === cardData.length - 1 ? 0 : curr + 1));
     }, 3000);
     return () => {
       clearTimeout(timeout);
     };
-  }, [selectedCardIndex]);
+  }, [selectedCardIndex, isHovered]);
 
   return (
     <section className="py-24 overflow-x-clip md:-mt-28">
@@ -58,6 +59,8 @@ export const FeaturesCardsSection = () => {
             {cardData.map(({ image, title, description, color }, cardIndex) => (
               <div
                 className="inline-flex transition-all duration-500"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
                 style={{ transform: `translateX(calc((-100% - 2rem) * ${selectedCardIndex})` }}
               >
                 <Card key={title} className="max-w-xs md:max-w-md">
