@@ -36,6 +36,7 @@ const cardData = [
 
 export const FeaturesCardsSection = () => {
   const [selectedCardIndex, setSelectedCardIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
