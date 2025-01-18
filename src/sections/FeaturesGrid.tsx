@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { TextButton } from '../components/TextButton';
 
@@ -8,6 +9,9 @@ const listItems = [
 ];
 
 export const FeaturesGrid = () => {
+  const torusKnotRef = useRef();
+  const firstHemisphereRef = useRef();
+
   return (
     <section className="py-24 overflow-x-clip">
       <div className="container">
