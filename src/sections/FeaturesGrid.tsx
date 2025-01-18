@@ -9,8 +9,8 @@ const listItems = [
 ];
 
 export const FeaturesGrid = () => {
-  const torusKnotRef = useRef();
-  const firstHemisphereRef = useRef();
+  const torusKnotRef = useRef(null);
+  const firstHemisphereRef = useRef(null);
 
   return (
     <section className="py-24 overflow-x-clip">
@@ -46,11 +46,13 @@ export const FeaturesGrid = () => {
                   src="/assets/images/torus-knot.png"
                   alt="Torus Knot 3D shape"
                   className="size-96 max-w-none"
+                  ref={torusKnotRef}
                 />
                 <img
                   src="/assets/images/hemisphere.png"
                   alt="Hemisphere 3D shape"
                   className="absolute size-96 top-3/4 -z-10 scale-x-[-1]"
+                  ref={firstHemisphereRef}
                 />
               </div>
             </div>
