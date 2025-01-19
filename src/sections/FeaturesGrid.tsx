@@ -24,7 +24,7 @@ export const FeaturesGrid = () => {
     offset: ['start end', 'end start'],
   });
   const firstHemisphereTranslateY = useTransform(firstHemisphereScrollYProgress, [0, 1], [50, -50]);
-  const firstHemisphereRotate = useTransform(firstHemisphereScrollYProgress, [0, 1], [-20, 10]);
+  const firstHemisphereRotate = useTransform(firstHemisphereScrollYProgress, [0, 1], [-20, -50]);
 
   return (
     <section className="py-24 overflow-x-clip">
@@ -68,6 +68,7 @@ export const FeaturesGrid = () => {
                   alt="Hemisphere 3D shape"
                   className="absolute size-96 top-3/4 -z-10 scale-x-[-1]"
                   ref={firstHemisphereRef}
+                  style={{ translateY: firstHemisphereTranslateY, rotate: firstHemisphereRotate }}
                 />
               </div>
             </div>
