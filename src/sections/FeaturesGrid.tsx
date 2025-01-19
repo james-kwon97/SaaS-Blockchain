@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { TextButton } from '../components/TextButton';
-import { motion, useScroll } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const listItems = [
   'Experience unparalleled security and scalability',
@@ -12,7 +12,12 @@ const listItems = [
 export const FeaturesGrid = () => {
   const torusKnotRef = useRef(null);
   const firstHemisphereRef = useRef(null);
-  useScroll({ target: torusKnotRef, offset: ['start end', 'end start'] });
+  const { scrollYProgress: torusKnotScrollYProgress } = useScroll({
+    target: torusKnotRef,
+    offset: ['start end', 'end start'],
+  });
+  const torusKnotTranslateY = useTransform(torusKnotScrollYProgress, [0, 1], [100, -100]);
+  const torusKnotRotate = useTransform(torusKnotScrollYProgress, [0, 1], [30, -30]);
 
   return (
     <section className="py-24 overflow-x-clip">
