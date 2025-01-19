@@ -43,13 +43,13 @@ export const FeaturesGrid = () => {
             </div>
             <div className="hidden md:block">
               <div className="relative inline-flex z-0">
-                <img
+                <motion.img
                   src="/assets/images/torus-knot.png"
                   alt="Torus Knot 3D shape"
                   className="size-96 max-w-none"
                   ref={torusKnotRef}
                 />
-                <img
+                <motion.img
                   src="/assets/images/hemisphere.png"
                   alt="Hemisphere 3D shape"
                   className="absolute size-96 top-3/4 -z-10 scale-x-[-1]"
