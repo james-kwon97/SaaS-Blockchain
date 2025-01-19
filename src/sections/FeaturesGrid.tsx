@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { TextButton } from '../components/TextButton';
+import { motion } from 'framer-motion';
 
 const listItems = [
   'Experience unparalleled security and scalability',
