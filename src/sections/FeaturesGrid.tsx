@@ -54,6 +54,7 @@ export const FeaturesGrid = () => {
                   alt="Torus Knot 3D shape"
                   className="size-96 max-w-none"
                   ref={torusKnotRef}
+                  style={{ translateY: torusKnotTranslateY, rotate: torusKnotRotate }}
                 />
                 <motion.img
                   src="/assets/images/hemisphere.png"
