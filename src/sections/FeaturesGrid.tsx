@@ -19,6 +19,13 @@ export const FeaturesGrid = () => {
   const torusKnotTranslateY = useTransform(torusKnotScrollYProgress, [0, 1], [100, -100]);
   const torusKnotRotate = useTransform(torusKnotScrollYProgress, [0, 1], [30, -30]);
 
+  const { scrollYProgress: firstHemisphereScrollYProgress } = useScroll({
+    target: firstHemisphereRef,
+    offset: ['start end', 'end start'],
+  });
+  const firstHemisphereTranslateY = useTransform(firstHemisphereScrollYProgress, [0, 1], [50, -50]);
+  const firstHemisphereRotate = useTransform(firstHemisphereScrollYProgress, [0, 1], [-20, 10]);
+
   return (
     <section className="py-24 overflow-x-clip">
       <div className="container">
