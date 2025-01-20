@@ -34,6 +34,18 @@ export const FeaturesGrid = () => {
   const coneTranslateY = useTransform(coneScrollYProgress, [0, 1], [100, -100]);
   const coneRotate = useTransform(coneScrollYProgress, [0, 1], [12, 45]);
 
+  const secondHemisphereRef = useRef(null);
+  const { scrollYProgress: secondHemisphereScrollYProgress } = useScroll({
+    target: secondHemisphereRef,
+    offset: ['start end', 'end start'],
+  });
+  const secondHemisphereTranslateY = useTransform(
+    secondHemisphereScrollYProgress,
+    [0, 1],
+    [50, -50],
+  );
+  const secondHemisphereRotate = useTransform(secondHemisphereScrollYProgress, [0, 1], [-20, 10]);
+
   return (
     <section className="py-24 overflow-x-clip">
       <div className="container">
@@ -91,10 +103,12 @@ export const FeaturesGrid = () => {
                   ref={coneRef}
                   style={{ translateY: coneTranslateY, rotate: coneRotate }}
                 />
-                <img
+                <motion.img
                   src="/assets/images/hemisphere.png"
                   alt="Hemisphere 3D shape"
                   className="absolute top-3/4 -z-10"
+                  ref={secondHemisphereRef}
+                  style={{ translateY: secondHemisphereTranslateY, rotate: secondHemisphereRotate }}
                 />
               </div>
             </div>
