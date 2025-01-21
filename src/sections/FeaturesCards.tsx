@@ -93,7 +93,6 @@ export const FeaturesCardsSection = () => {
                 onClick={() => setSelectedCardIndex(cardIndex)}
               ></div>
             ))}
-            <div></div>
           </div>
         </div>
       </div>
