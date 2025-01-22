@@ -4,9 +4,12 @@ import { getPostColorFromCategory } from '../utils/postUtils';
 import { Tag } from '../components/Tag';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { twMerge } from 'tailwind-merge';
+import { useScroll } from 'framer-motion';
+import { useRef } from 'react';
 
 export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) => {
   const { latestPosts } = props;
+  const targetRef = useRef(null);
   useScroll({ target: undefined, offset: [] });
 
   return (
@@ -37,7 +40,7 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
             ))}
           </div>
 
-          <div className="hidden md:flex flex-col gap-8 mt-16">
+          <div className="hidden md:flex flex-col gap-8 mt-16" ref={targetRef}>
             {latestPosts.map(({ data: { title, description, category } }, postIndex) => (
               <Card
                 key={postIndex}
