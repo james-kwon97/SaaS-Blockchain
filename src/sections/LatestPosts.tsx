@@ -11,7 +11,7 @@ export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) =
   const { latestPosts } = props;
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: undefined,
+    target: targetRef,
     offset: ['start end', 'start center'],
   });
   const marginTop = useTransform(scrollYProgress, [0, 1], [0, 64]);
