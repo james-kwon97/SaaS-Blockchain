@@ -7,6 +7,8 @@ import { twMerge } from 'tailwind-merge';
 
 export const LatestPosts = (props: { latestPosts: CollectionEntry<'blog'>[] }) => {
   const { latestPosts } = props;
+  useScroll({ target: undefined, offset: [] });
+
   return (
     <section className="py-60">
       <div className="container">
