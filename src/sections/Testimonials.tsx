@@ -1,4 +1,5 @@
 import { twMerge } from "tailwind-merge"
+import {motion } from 'framer-motion'
 
 const testimonials = [
   {
@@ -23,7 +24,7 @@ export const TestimonialsSection = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-8 lg:gap-12">
           {testimonials.map((testimonial,testimonialIndex) => (<div>
-            <blockquote key={testimonialIndex} className={twMerge(testimonialIndex === 2 && 'md:hidden lg:block')}>
+            <motion.blockquote key={testimonialIndex} className={twMerge(testimonialIndex === 2 && 'md:hidden lg:block')}>
               <p className="font-heading text-3xl lg:text-4xl font-black">&ldquo;{testimonial.text}&rdquo;</p>
               <cite className="mt-8 block">
                 <div className="flex gap-3 items-center">
@@ -34,7 +35,7 @@ export const TestimonialsSection = () => {
                   <div className="text-zinc-400 not-italic">{testimonial.title}</div>
                 </div>
               </cite>
-            </blockquote>
+            </motion.blockquote>
           </div>))}
         </div>
       </div>
