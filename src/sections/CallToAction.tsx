@@ -10,7 +10,7 @@ export const CallToAction = () => {
           <Hexagon size={700}/>
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Hexagon size={1100}/>
+          <Hexagon size={1100} reverse duration={50}/>
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Circle className="absolute left-0 -top-[400px]">
