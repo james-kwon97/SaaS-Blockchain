@@ -6,6 +6,7 @@ import { useScroll } from "framer-motion"
 
 export const CallToAction = () => {
   const sectionRef = useRef(null)
+  const {scrollYProgress} = useScroll({target: sectionRef, offset: ['start end', 'end start']})
 
 
   return <section className="py-60 overflow-hidden" ref={sectionRef}>
