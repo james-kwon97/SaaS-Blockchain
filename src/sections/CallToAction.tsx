@@ -2,11 +2,13 @@ import { CutCornerButton } from "../components/CutCornerButton"
 import {Hexagon} from "../components/Hexagon"
 import {Circle} from "../components/Circle"
 import { useRef } from "react"
-import { useScroll } from "framer-motion"
+import { useScroll, useTransform, motion } from "framer-motion"
 
 export const CallToAction = () => {
   const sectionRef = useRef(null)
   const {scrollYProgress} = useScroll({target: sectionRef, offset: ['start end', 'end start']})
+
+  const rotate = useTransform(scrollYProgress, [0,1], [45,-45])
 
 
   return <section className="py-60 overflow-hidden" ref={sectionRef}>
