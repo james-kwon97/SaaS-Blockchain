@@ -1,9 +1,14 @@
 import { CutCornerButton } from "../components/CutCornerButton"
 import {Hexagon} from "../components/Hexagon"
 import {Circle} from "../components/Circle"
+import { useRef } from "react"
+import { useScroll } from "framer-motion"
 
 export const CallToAction = () => {
-  return <section className="py-60 overflow-hidden">
+  const sectionRef = useRef(null)
+
+
+  return <section className="py-60 overflow-hidden" ref={sectionRef}>
     <div className="container">
       <div className="relative">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
