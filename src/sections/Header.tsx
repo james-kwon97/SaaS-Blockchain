@@ -35,7 +35,11 @@ export const HeaderSection = () => {
         <div>
           <div>
             <nav>
-              <a href="#">Link</a>
+              {navLinks.map(({ title, href }) => (
+                <a href={href} key={title}>
+                  {title}
+                </a>
+              ))}
             </nav>
           </div>
         </div>
