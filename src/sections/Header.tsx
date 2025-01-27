@@ -33,8 +33,8 @@ export const HeaderSection = () => {
       </header>
       <div className="fixed size-full top-0 left-0 z-30 bg-zinc-900">
         <div className="absolute inset-2 rounded-md bg-zinc-800 mt-24">
-          <div>
-            <nav>
+          <div className="h-full flex justify-center items-center">
+            <nav className="flex flex-col items-center gap-12">
               {navLinks.map(({ title, href }) => (
                 <a href={href} key={title}>
                   {title}
