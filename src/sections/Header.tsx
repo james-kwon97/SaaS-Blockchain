@@ -36,7 +36,11 @@ export const HeaderSection = () => {
           <div className="h-full flex justify-center items-center">
             <nav className="flex flex-col items-center gap-12">
               {navLinks.map(({ title, href }) => (
-                <a href={href} key={title}>
+                <a
+                  href={href}
+                  key={title}
+                  className="text-4xl font-heading font-black text-zinc-500 hover:text-zinc-300 transition duration-300"
+                >
                   {title}
                 </a>
               ))}
