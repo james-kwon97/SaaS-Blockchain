@@ -31,8 +31,8 @@ export const HeaderSection = () => {
           </div>
         </div>
       </header>
-      <div>
-        <div>
+      <div className="fixed size-full top-0 left-0 z-30 bg-zinc-900">
+        <div className="absolute inset-2 rounded-md bg-zinc-800 mt-24">
           <div>
             <nav>
               {navLinks.map(({ title, href }) => (
