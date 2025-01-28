@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { Hexagon } from '../components/Hexagon';
+import { twMerge } from 'tailwind-merge';
 
 const navLinks = [
   { title: 'Home', href: '/' },
@@ -24,10 +25,20 @@ export const HeaderSection = () => {
               <CutCornerButton className="hidden md:inline-flex">Get Started</CutCornerButton>
               <div className="size-10 relative" onClick={() => setIsOpen((curr) => !curr)}>
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-5 h-0.5 bg-zinc-300 -translate-y-1"></div>
+                  <div
+                    className={twMerge(
+                      'w-5 h-0.5 bg-zinc-300 -translate-y-1',
+                      isOpen && 'translate-y-0 rotate-45',
+                    )}
+                  ></div>
                 </div>
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-5 h-0.5 bg-zinc-300 translate-y-1"></div>
+                  <div
+                    className={twMerge(
+                      'w-5 h-0.5 bg-zinc-300 translate-y-1',
+                      isOpen && 'translate-y-0 -rotate-45',
+                    )}
+                  ></div>
                 </div>
               </div>
             </div>
