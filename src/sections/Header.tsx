@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { Hexagon } from '../components/Hexagon';
 
@@ -9,6 +10,8 @@ const navLinks = [
 ];
 
 export const HeaderSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <header className="sticky top-0 z-40 bg-zinc-900/50 backdrop-blur-lg">
