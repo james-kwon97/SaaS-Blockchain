@@ -33,11 +33,11 @@ export const HeaderSection = () => {
         </div>
       </header>
       <div className="fixed size-full top-0 left-0 z-30 bg-zinc-900">
-        <div className="absolute inset-2 rounded-md bg-zinc-800 mt-24">
-          <div>
+        <div className="absolute inset-2 rounded-md bg-zinc-800 mt-24 z-0">
+          <div className="absolute top-1/2 left-full -translate-y-1/2 -translate-x-1/2 -z-10">
             <Hexagon size={700} />
           </div>
-          <div>
+          <div className="absolute top-1/2 left-full -translate-y-1/2 -translate-x-1/2 -z-10">
             <Hexagon size={1100} />
           </div>
           <div className="h-full flex justify-center items-center">
