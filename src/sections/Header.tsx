@@ -48,7 +48,13 @@ export const HeaderSection = () => {
       </header>
       <AnimatePresence>
         {isOpen && (
-          <motion.div className="fixed size-full top-0 left-0 z-30 bg-zinc-900">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="fixed size-full top-0 left-0 z-30 bg-zinc-900"
+          >
             <div className="absolute inset-2 rounded-md bg-zinc-800 mt-24 z-0">
               <div className="absolute top-1/2 left-full -translate-y-1/2 -translate-x-1/2 -z-10">
                 <Hexagon size={700} />
