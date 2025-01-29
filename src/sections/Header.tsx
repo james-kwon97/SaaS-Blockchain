@@ -27,7 +27,7 @@ export const HeaderSection = () => {
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                   <div
                     className={twMerge(
-                      'w-5 h-0.5 bg-zinc-300 -translate-y-1',
+                      'w-5 h-0.5 bg-zinc-300 -translate-y-1 transition-all duration-500',
                       isOpen && 'translate-y-0 rotate-45',
                     )}
                   ></div>
@@ -35,7 +35,7 @@ export const HeaderSection = () => {
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                   <div
                     className={twMerge(
-                      'w-5 h-0.5 bg-zinc-300 translate-y-1',
+                      'w-5 h-0.5 bg-zinc-300 translate-y-1 transition-all duration-500',
                       isOpen && 'translate-y-0 -rotate-45',
                     )}
                   ></div>
