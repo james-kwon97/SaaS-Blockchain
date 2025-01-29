@@ -71,9 +71,10 @@ export const HeaderSection = () => {
                       transition={{ duration: 0.5, ease: 'linear', delay: 0.25 * index }}
                       href={href}
                       key={title}
-                      className="text-4xl font-heading font-black text-zinc-500 hover:text-zinc-300 transition duration-300"
                     >
-                      {title}
+                      <span className="text-4xl font-heading font-black text-zinc-500 hover:text-zinc-300 transition duration-300">
+                        {title}
+                      </span>
                     </motion.a>
                   ))}
                 </nav>
