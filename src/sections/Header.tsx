@@ -71,7 +71,7 @@ export const HeaderSection = () => {
                 <Hexagon size={1100} />
               </div>
               <div className="h-full flex justify-center items-center">
-                <nav className="flex flex-col items-center gap-12">
+                <nav className="flex flex-col items-center gap-12 md:gap-16">
                   {navLinks.map(({ title, href }, index) => (
                     <motion.a
                       initial={{ opacity: 0, y: 20 }}
