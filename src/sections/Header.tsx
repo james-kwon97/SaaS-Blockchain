@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CutCornerButton } from '../components/CutCornerButton';
 import { Hexagon } from '../components/Hexagon';
 import { twMerge } from 'tailwind-merge';
@@ -13,6 +13,14 @@ const navLinks = [
 
 export const HeaderSection = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isOpen]);
 
   return (
     <>
