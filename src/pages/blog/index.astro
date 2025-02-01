@@ -4,19 +4,28 @@
 // const posts = (await getCollection('blog')).sort(
 // 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 // );
-import DefaultLayout from "../../layouts/Default.astro"
-import {HeaderSection} from "../../sections/Header"
-import {CutCornerButton} from "../../components/CutCornerButton"
+import DefaultLayout from '../../layouts/Default.astro';
+import { HeaderSection } from '../../sections/Header';
+import { CutCornerButton } from '../../components/CutCornerButton';
 ---
 
 <DefaultLayout>
-  <HeaderSection client:load/>
-  <div>
-    <p>Latest Post</p>
-    <h1>Regulatory Challenges Facing Blockchain</h1>
-    <p>Understanding the regulatory landscape surrounding Blockchain and what it means for the future of this technology.</p>
-    <CutCornerButton>Read More</CutCornerButton>
-  </div>
+  <HeaderSection client:load />
+  <section>
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <p class="uppercase font-extrabold text-center text-zinc-500 tracking-wider">Latest Post</p>
+        <h1 class="font-heading font-black text-7xl text-center mt-4">
+          Regulatory Challenges Facing Blockchain
+        </h1>
+        <p>
+          Understanding the regulatory landscape surrounding Blockchain and what it means for the
+          future of this technology.
+        </p>
+        <CutCornerButton>Read More</CutCornerButton>
+      </div>
+    </div>
+  </section>
   <div>
     {/* Blog posts */}
   </div>
