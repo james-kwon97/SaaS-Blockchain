@@ -31,7 +31,9 @@ const latestPost = posts[0];
           {latestPost.data.description}
         </p>
         <div class="flex justify-center mt-10">
-          <CutCornerButton>Read More</CutCornerButton>
+          <a href={`/blog/${latestPost.slug}`}>
+            <CutCornerButton>Read More</CutCornerButton>
+          </a>
         </div>
       </div>
     </div>
