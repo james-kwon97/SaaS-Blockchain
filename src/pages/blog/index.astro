@@ -4,6 +4,7 @@ import { HeaderSection } from '../../sections/Header';
 import { CutCornerButton } from '../../components/CutCornerButton';
 import { Hexagon } from '../../components/Hexagon';
 import { getCollection } from 'astro:content';
+import { Card } from '../../components/Card';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -38,7 +39,14 @@ const latestPost = posts[0];
       </div>
     </div>
   </section>
-  <div>
-    {/* Blog posts */}
-  </div>
+  <section class="pb-[1000px">
+    <div class="container">
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          {posts.map(({}) => <Card></Card>)}
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </section>
 </DefaultLayout>
