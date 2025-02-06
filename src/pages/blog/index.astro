@@ -48,7 +48,7 @@ const latestPost = posts[0];
           {
             posts.map(({ data: { category, title, description } }) => (
               <Card color={getPostColorFromCategory(category)}>
-                <Tag>{category}</Tag>
+                <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
                 <h2 class="font-heading font-black text-3xl mt-4">{title}</h2>
                 <p class="text-lg mt-6 text-zinc-400">{description}</p>
               </Card>
