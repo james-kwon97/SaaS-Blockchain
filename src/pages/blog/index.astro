@@ -44,14 +44,16 @@ const latestPost = posts[0];
   <section class="pb-[1000px">
     <div class="container">
       <div class="grid grid-cols-2 gap-8">
-        <div>
+        <div class="flex flex-col gap-12">
           {
-            posts.map(({ data: { category, title, description } }) => (
-              <Card buttonText="Read More" color={getPostColorFromCategory(category)}>
-                <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
-                <h2 class="font-heading font-black text-3xl mt-4">{title}</h2>
-                <p class="text-lg mt-6 text-zinc-400">{description}</p>
-              </Card>
+            posts.map(({ data: { category, title, description }, slug }) => (
+              <a href={`/blog/${slug}`}>
+                <Card buttonText="Read More" color={getPostColorFromCategory(category)}>
+                  <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
+                  <h2 class="font-heading font-black text-3xl mt-4">{title}</h2>
+                  <p class="text-lg mt-6 text-zinc-400">{description}</p>
+                </Card>
+              </a>
             ))
           }
         </div>
