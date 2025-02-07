@@ -8,6 +8,7 @@ import { Card } from '../../components/Card';
 import { Tag } from '../../components/Tag';
 import { getPostColorFromCategory } from '../../utils/postUtils';
 import { twMerge } from 'tailwind-merge';
+import { motion } from 'framer-motion';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -48,13 +49,13 @@ const latestPost = posts[0];
         <div class="flex flex-col gap-12">
           {
             posts.map(({ data: { category, title, description }, slug }, postIndex) => (
-              <a href={`/blog/${slug}`} class={twMerge(postIndex % 2 === 0 ? '' : 'hidden')}>
+              <motion.a href={`/blog/${slug}`} class={twMerge(postIndex % 2 === 0 ? '' : 'hidden')}>
                 <Card buttonText="Read More" color={getPostColorFromCategory(category)}>
                   <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
                   <h2 class="font-heading font-black text-3xl mt-4">{title}</h2>
                   <p class="text-lg mt-6 text-zinc-400">{description}</p>
                 </Card>
-              </a>
+              </motion.a>
             ))
           }
         </div>
