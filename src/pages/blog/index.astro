@@ -59,7 +59,7 @@ const latestPost = posts[0];
           }
         </div>
         <div>
-          <div class="flex flex-col gap-12">
+          <div class="flex flex-col gap-12 mt-24">
             {
               posts.map(({ data: { category, title, description }, slug }, postIndex) => (
                 <a href={`/blog/${slug}`} class={twMerge(postIndex % 2 === 0 ? 'hidden' : '')}>
