@@ -51,6 +51,10 @@ const latestPost = posts[0];
             posts.map(({ data: { category, title, description }, slug }, postIndex) => (
               <motion.a
                 client:load
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5, ease: 'easeIn' }}
                 href={`/blog/${slug}`}
                 className={twMerge(postIndex % 2 === 0 ? '' : 'hidden')}
               >
