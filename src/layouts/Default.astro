@@ -1,5 +1,6 @@
 ---
-import "../styles/global.css";
+import { HeaderSection } from '../sections/Header';
+import '../styles/global.css';
 ---
 
 <!doctype html>
@@ -16,6 +17,7 @@ import "../styles/global.css";
     />
   </head>
   <body>
+    <HeaderSection client:load />
     <slot />
   </body>
 </html>
