@@ -9,6 +9,9 @@ import { Tag } from '../../components/Tag';
 import { getPostColorFromCategory } from '../../utils/postUtils';
 import { twMerge } from 'tailwind-merge';
 import { motion } from 'framer-motion';
+import { TestimonialsSection } from '../../sections/Testimonials';
+import { CallToAction } from '../../sections/CallToAction';
+import { Footer } from '../../sections/Footer';
 
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -93,4 +96,7 @@ const latestPost = posts[0];
       </div>
     </div>
   </section>
+  <TestimonialsSection client:load />
+  <CallToAction client:load />
+  <Footer />
 </DefaultLayout>
