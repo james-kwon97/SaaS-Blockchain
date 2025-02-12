@@ -54,7 +54,7 @@ const latestPost = posts[0];
                 viewport={{ once: true, amount: 0.5 }}
                 transition={{ duration: 0.5, ease: 'easeIn' }}
                 href={`/blog/${slug}`}
-                className={twMerge(postIndex % 2 === 0 ? '' : 'hidden')}
+                className={twMerge(postIndex % 2 === 0 ? '' : 'block md:hidden')}
               >
                 <Card buttonText="Read More" color={getPostColorFromCategory(category)}>
                   <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
