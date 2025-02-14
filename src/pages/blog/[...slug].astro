@@ -1,4 +1,5 @@
 ---
+import InteriorHero from '../../components/InteriorHero.astro';
 import DefaultLayout from '../../layouts/Default.astro';
 import { type CollectionEntry, getCollection } from 'astro:content';
 
@@ -16,5 +17,6 @@ const { Content } = await post.render();
 ---
 
 <DefaultLayout>
+  <InteriorHero />
   <Content />
 </DefaultLayout>
