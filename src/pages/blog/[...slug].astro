@@ -18,13 +18,14 @@ const post: Props = Astro.props;
 const {
   data: { category },
 } = post;
-
 const { Content } = await post.render();
 ---
 
 <DefaultLayout>
   <InteriorHero>
-    <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
+    <div class="flex justify-center">
+      <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
+    </div>
   </InteriorHero>
 
   <Content />
