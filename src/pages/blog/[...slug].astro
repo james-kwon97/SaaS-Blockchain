@@ -16,7 +16,7 @@ type Props = CollectionEntry<'blog'>;
 
 const post: Props = Astro.props;
 const {
-  data: { category },
+  data: { category, title },
 } = post;
 const { Content } = await post.render();
 ---
@@ -26,6 +26,7 @@ const { Content } = await post.render();
     <div class="flex justify-center">
       <Tag color={getPostColorFromCategory(category)}>{category}</Tag>
     </div>
+    <h1 class="font-heading font-black text-7xl text-center">{title}</h1>
   </InteriorHero>
 
   <Content />
