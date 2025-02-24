@@ -1,6 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
+import InteriorContent from '../components/InteriorContent.astro';
 import InteriorHero from '../components/InteriorHero.astro';
 import DefaultLayout from '../layouts/Default.astro';
+
+const positions = await getCollection('positions');
 ---
 
 <DefaultLayout>
@@ -14,4 +18,13 @@ import DefaultLayout from '../layouts/Default.astro';
       that make a difference.
     </p>
   </InteriorHero>
+  <InteriorContent>
+    <div class="pb-[1000px]">
+      {
+        positions.map(({ data: { title, type, description, category } }) => (
+          <div>{position.data.title}</div>
+        ))
+      }
+    </div>
+  </InteriorContent>
 </DefaultLayout>
