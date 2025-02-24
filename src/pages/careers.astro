@@ -4,6 +4,7 @@ import InteriorContent from '../components/InteriorContent.astro';
 import InteriorHero from '../components/InteriorHero.astro';
 import DefaultLayout from '../layouts/Default.astro';
 import { Card } from '../components/Card';
+import { Tag } from '../components/Tag';
 
 const positions = await getCollection('positions');
 ---
@@ -21,7 +22,14 @@ const positions = await getCollection('positions');
   </InteriorHero>
   <InteriorContent>
     <div class="pb-[1000px]">
-      {positions.map(({ data: { title, type, description, category } }) => <Card>{title}</Card>)}
+      {
+        positions.map(({ data: { title, type, description, category, remote } }) => (
+          <Card>
+            <div>{remote && <Tag>Remote</Tag>}</div>
+            <h2>{title}</h2>
+          </Card>
+        ))
+      }
     </div>
   </InteriorContent>
 </DefaultLayout>
