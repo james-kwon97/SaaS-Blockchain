@@ -23,3 +23,16 @@ export const getColorFromPositionType = (type: string) => {
       return 'fuchsia';
   }
 };
+
+export const getColorFromPositionCategory = (category: string) => {
+  switch (category) {
+    case 'Engineering':
+      return 'lime';
+    case 'Product':
+      return 'cyan';
+    case 'Marketing':
+      return 'violet';
+    default:
+      return 'fuchsia';
+  }
+};
