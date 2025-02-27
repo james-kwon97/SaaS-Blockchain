@@ -26,12 +26,12 @@ const positions = await getCollection('positions');
       {
         positions.map(({ data: { title, type, description, category, remote } }) => (
           <Card color={getColorFromPositionCategory(category)}>
-            <div>
+            <div class="flex items-center gap-3">
               {remote && <Tag>Remote</Tag>}
               <Tag color={getColorFromPositionType(type)}>{type}</Tag>
             </div>
-            <h2>{title}</h2>
-            <p>{description}</p>
+            <h2 class="text-3xl font-black font-heading mt-6">{title}</h2>
+            <p class="text-xl text-zinc-400 mt-4">{description}</p>
           </Card>
         ))
       }
