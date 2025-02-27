@@ -25,7 +25,7 @@ const positions = await getCollection('positions');
     <div class="flex flex-col gap-12">
       {
         positions.map(({ data: { title, type, description, category, remote } }) => (
-          <Card color={getColorFromPositionCategory(category)}>
+          <Card color={getColorFromPositionCategory(category)} buttonText="Apply Now">
             <div class="flex items-center gap-3">
               {remote && <Tag>Remote</Tag>}
               <Tag color={getColorFromPositionType(type)}>{type}</Tag>
