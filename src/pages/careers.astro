@@ -26,7 +26,11 @@ const positions = await getCollection('positions');
     <div class="flex flex-col gap-12">
       {
         positions.map(({ data: { title, type, description, category, remote } }) => (
-          <motion.a href="/contact">
+          <motion.a
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            href="/contact"
+          >
             <Card color={getColorFromPositionCategory(category)} buttonText="Apply Now">
               <div class="flex items-center gap-3">
                 {remote && <Tag>Remote</Tag>}
