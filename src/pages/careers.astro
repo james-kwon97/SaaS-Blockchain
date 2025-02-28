@@ -27,6 +27,7 @@ const positions = await getCollection('positions');
       {
         positions.map(({ data: { title, type, description, category, remote } }) => (
           <motion.a
+            client:load
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             href="/contact"
